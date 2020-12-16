@@ -1,38 +1,157 @@
-.App {
-  text-align: center;
+body {
+  background-color: rgb(219, 221, 221);
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+img {
+  height: 40px;
+  width: 35px;
+  object-fit: cover;
 }
+.socials {
+  height: 20px;
+  width: 20px;
+  object-fit: cover;
+}
+.socialPosition {
+  position: fixed;
+  top: 600px;
+  left: 260px;
+}
+h3 {
+  color: #49796794;
+  position: relative;
+  left: 20px;
+  text-transform: uppercase;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  font-family: "Times New Roman", Times, serif;
+  text-shadow: 1px 1px rgb(56, 105, 99);
+}
+@keyframes zoominoutsinglefeatured {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.3, 1.3);
+  }
+  100% {
+    transform: scale(1, 1);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.menuButton {
+  height: 40px;
+  width: 50px;
+  object-fit: cover;
+  position: relative;
+  left: 35px;
+  top: 20px;
+  animation: zoominoutsinglefeatured 3s forwards;
+  border-style: solid;
+  border-color: rgb(40, 122, 133);
+  animation-duration: 1500ms;
+  animation-iteration-count: infinite;
 }
 
-.App-link {
-  color: #61dafb;
+.hideButton {
+  display: none;
+}
+.inline {
+  display: inline-block;
+}
+.xButton {
+  color: red;
+
+  margin-left: 80px;
+  font-size: 70%;
+  border: none;
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  text-shadow: 1px 1px rgb(58, 38, 38);
+}
+.xButton1 {
+  color: red;
+
+  margin-left: 300px;
+  font-size: 70%;
+  border: none;
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  text-shadow: 1px 1px rgb(58, 38, 38);
+  transition: 1s;
+}
+.xButton1:onclick {
+  opacity: 0.8;
 }
 
-@keyframes App-logo-spin {
+.title {
+  color: darkcyan;
+  text-transform: capitalize;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-shadow: 2px 2px 8px #5a5f64;
+}
+.divBackground {
+  background-color: white;
+  width: 350px;
+  height: 613px;
+  box-shadow: 5px 10px 18px #888888;
+  animation: slide 3s forwards;
+  animation-duration: 2s;
+  opacity: 0.9;
+}
+.modal {
+  z-index: 1;
+  text-align: center;
+  background-color: white;
+  height: 400px;
+  width: 600px;
+  position: fixed;
+  bottom: 30px;
+  right: 340px;
+  box-shadow: 5px 10px 18px #888888;
+  animation: fading 3s forwards;
+  animation-duration: 0.5s;
+}
+.center {
+  position: fixed;
+  bottom: 250px;
+  right: 600px;
+  width: 10%;
+  border: 1px solid rgb(22, 37, 49);
+  padding: 10px;
+  color: rgb(121, 110, 112);
+  border-radius: 10px;
+  transition: 0.3s;
+  opacity: 1;
+}
+.center:hover {
+  background-color: rgb(206, 155, 165);
+  font-family: Georgia, "Times New Roman", Times, serif;
+
+  font-weight: bolder;
+  color: rgb(0, 0, 0);
+}
+.modalPos {
+  position: relative;
+  top: 150px;
+  left: 160px;
+}
+@keyframes fading {
+  0% {
+    opacity: 0.7;
+  }
+  50% {
+    opcity: 0.9;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes slide {
   from {
-    transform: rotate(0deg);
+    margin-left: 0px;
   }
   to {
-    transform: rotate(360deg);
+    margin-left: 3px;
   }
 }
